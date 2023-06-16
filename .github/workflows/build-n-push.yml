@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
 
       - name: Build and push
-        run: bash build.sh 1.1
+        run: bash build.sh 1.2

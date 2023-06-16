@@ -1,8 +1,8 @@
 name: Build and Push Docker Image
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 
 jobs:
   build-and-push:
@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
 
       - name: Build and push
-        run: bash build.sh 1.2
+        run: bash scripts/build.sh ${{ env.TAG }}

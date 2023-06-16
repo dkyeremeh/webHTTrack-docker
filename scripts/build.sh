@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function build_n_push {
 
   docker buildx build . \

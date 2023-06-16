@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
 
       - name: Build and push
-        run: bash scripts/build.sh ${{ env.TAG }}
+        run: bash scripts/build.sh ${{ github.ref_name }}

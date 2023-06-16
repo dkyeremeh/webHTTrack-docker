@@ -5,7 +5,7 @@ function build_n_push {
   docker buildx build . \
   --platform linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6 \
   --tag $1:$2 --tag $1:latest  \
-  --build-arg VERSION=$1
+  --build-arg VERSION=$1 \
   --push
 }
 

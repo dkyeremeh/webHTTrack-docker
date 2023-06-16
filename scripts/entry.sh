@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-echo "We're pretending to be firefox to httrack"
+# webhttrack
 
-while true
+while pidof htsserver 
 do
-    pidof htsserver > /dev/null
-    if [ $? = 1 ]; then
-        killall webhttrack
-        echo Restarting webhttrack
-        webhttrack
-    fi
-    sleep 15
+    sleep 7
 done
 

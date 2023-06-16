@@ -9,4 +9,4 @@ RUN apt-get install -y webhttrack
 RUN mkdir -p /websites
 COPY scripts/entry.sh /usr/bin/firefox
 
-ENTRYPOINT [ "webhttrack" ]
+ENTRYPOINT [ "firefox" ]
